@@ -7,6 +7,8 @@ gem 'rails', '4.0.5'
 
 # Modiied to setup db for different dev and prod env
 
+gem 'bootstrap-sass', '~> 3.1.1'
+
 group :production do
    gem 'pg', '~> 0.17.0'
    gem 'rails_12factor'
