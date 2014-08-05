@@ -36,6 +36,7 @@ gem 'jquery-rails'
 # Added the faker gem for seed data for class exercise
 gem 'faker'
 gem 'devise'
+gem 'figaro'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
