@@ -39,7 +39,13 @@ gem 'devise'
 gem 'figaro'
 gem 'pundit'
 gem 'redcarpet'
+
 gem 'will_paginate', '~> 3.0.5'
+
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
