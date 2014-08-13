@@ -11,9 +11,12 @@
 
     <hr/>
     <h2 Comments </h2>
+      <%= render partial: 'form', locals: { topic: @topic, comment: @comment } %>
+   </div>
+
     <div class="js-comments">  
       <%= render partial: 'comments/comment', collection: @comments, locals: { topic: @topic, post: @post } %>
-  </div>
+   </div>
   
   <div class="col-md-4">
     <% if policy(@post).edit? %>
