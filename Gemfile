@@ -9,6 +9,10 @@ gem 'rails', '4.0.5'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
+group :test do
+  gem 'rspec-rails'
+end
+
 group :production do
    gem 'pg', '~> 0.17.0'
    gem 'rails_12factor'
