@@ -9,6 +9,20 @@ class UsersController < ApplicationController
        redirect_to edit_user_registration_path
      end
    end
+
+   def destroy
+     @topic = Topic.find(params[:id])
+     name = @topic.name
+
+     authorize @topic
+     if @topic.destroy
+       flash[:notice] = "\"#{name}\" was deleted successfully."
+       redirect_to topics_path
+     else
+       flash[:error] = "There was an error deleting the topic."
+       render :show
+     end
+   end 
  
    private
  
