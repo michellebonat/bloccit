@@ -1,10 +1,14 @@
 Bloccit::Application.routes.draw do
   get "comments/create"
   devise_for :users
-   resources :users, only: [:update]
+  resources :users, only: [:update]
   resources :posts
-  # added this for comments exercise
+
    resources :comments, only: [:create]
+
+     post '/up-vote' => 'votes#up_vote', as: :up_vote
+     post '/down-vote' => 'votes#down_vote', as: :down_vote
+
    resources :topics
 
     resources :topics do
