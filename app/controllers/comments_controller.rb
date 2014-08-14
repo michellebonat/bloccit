@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  respond_to :html
   def create
     # this should create a new comment associated with a post and the current_user who created it
     @topic = Topic.find( params[:topic_id] )
@@ -9,7 +10,7 @@ class CommentsController < ApplicationController
     @comment.post = @post
     @new_comment = Comment.new
 
-    authorize @comment
+    # authorize @comment
 
     if @comment.save
       flash[:notice] = "Comment was created."

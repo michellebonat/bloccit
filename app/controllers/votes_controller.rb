@@ -37,7 +37,7 @@ class VotesController < ApplicationController
 
 end
 
-# the directions here were not making sense, so above is the sample and below is part of mine in process
+# the directions here were not making sense at all, so I used the sample file. above is the sample and below is part of mine in process
 
 
 #class VotesController < ApplicationController

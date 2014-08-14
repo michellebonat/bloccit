@@ -9,13 +9,8 @@ class Vote < ActiveRecord::Base
   private
 
   def update_post
-    post.update_rank
+    self.post.update_rank
   end
   
-  def update_rank
-    age = (created_at - Time.new(1970,1,1)) / (60 * 60 * 24) # 1 day in seconds
-    new_rank = points + age
- 
-    update_attribute(:rank, new_rank)
-  end     
+   
 end
