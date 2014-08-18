@@ -13,7 +13,7 @@
        sign_in @user
  
        expect {
-         post( :up_vote, post_id: @post.id )
+         post( :up_vote, post_id: @post.id, topic_id: @post.topic.id )
        }.to change{ @post.up_votes }.by 1
      end
    end
