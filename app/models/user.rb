@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
   def role?(base_role)
   role == base_role.to_s
  end
+
+  def favorited(post)
+    favorites.where(post_id: post.id).first
+  end
 end
 
 
