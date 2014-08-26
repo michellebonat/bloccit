@@ -1,13 +1,20 @@
- <% if policy(Vote.new).create? %>
-   <div class="vote-arrows pull-left">
-     <div>
-       <%= link_to " ", topic_post_up_vote_path(topic,post), class: 'glyphicon glyphicon-chevron-up', method: :post %>
-     </div>
-     <div>
-       <strong><%= post.points %></strong>
-     </div>
-     <div>
-       <%= link_to " ", topic_post_down_vote_path(topic,post), class: 'glyphicon glyphicon-chevron-down', method: :post %>
-     </div>
+<% if policy( Vote.new ).create? %>
+  <div class="vote-arrows pull-left">
+    <div>
+      <%= link_to " ", 
+        topic_post_up_vote_path(topic,post), 
+        class: up_vote_link_classes(post), method: :post %>
+    </div>
+    <div>
+      <strong><%= post.points %></strong>
+    </div>
+    <div>
+      <%= link_to " ", 
+        topic_post_down_vote_path(topic,post), 
+        class: down_vote_link_classes(post), method: :post %>
+    </div>
    </div>
  <% end %>
+
+
+
