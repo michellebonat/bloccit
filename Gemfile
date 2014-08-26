@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 
 group :test do
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :production do
