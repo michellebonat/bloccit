@@ -2,11 +2,13 @@
  
  describe "Visiting profiles" do
  
-   include TestFactories
- 
-   before do 
-     @user = authenticated_user
-     @post = associated_post(user: @user)
+   #include TestFactories
+
+   # replaced associated_post and authenticated_user for FG
+   before do
+     @user = create(:user)
+     # this line is causing the error
+     @post = create(:post, user: @user)
      @comment = Comment.new(user: @user, body: "A Comment")
      allow(@comment).to receive(:send_favorite_emails)
      @comment.save

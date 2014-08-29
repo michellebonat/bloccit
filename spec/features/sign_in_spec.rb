@@ -2,11 +2,12 @@ require 'rails_helper'
 
 describe "Sign in flow" do
  
-include TestFactories
+#include TestFactories
 
+# replaced authenticated_user for FG
 describe "successful" do
   it "redirects to the topics index" do
-    user = authenticated_user
+    user = create(:user)
     visit root_path 
 
     within '.user-info' do

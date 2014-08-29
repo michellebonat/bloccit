@@ -29,7 +29,7 @@
      end
    end
  
-   include TestFactories
+   # include TestFactories
  
    describe "#favorited(post)" do
      it "returns `nil` if the user has not favorited the post" do

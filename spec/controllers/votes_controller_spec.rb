@@ -2,14 +2,15 @@
  
  describe VotesController do 
  
-   include TestFactories
+   #include TestFactories
    include Devise::TestHelpers
  
+   # replaced authenticated_user and associated_post for FG
    describe '#up_vote' do
      it "adds an up-vote to the post" do
        request.env["HTTP_REFERER"] = '/'
-       @user = authenticated_user
-       @post = associated_post
+       @user = create(:user)
+       @post = create(:post)
        sign_in @user
  
        expect {
